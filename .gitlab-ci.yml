@@ -11,8 +11,8 @@ build-review:
   variables:
     DOCKER_IMAGE_NAME: "$CI_PROJECT_NAME-review"
     DOCKER_BUILD_ARG_DEBUG: "debug"
-    DOCKER_BUILD_ARG_OPEN_CITY_PROFILE_API_URL: "https://profiili-api.test.kuva.hel.ninja/graphql/"
-    DOCKER_BUILD_ARG_YOUTH_MEMBERSHIP_API_URL: "https://jassari-api.test.hel.ninja/graphql/"
+    DOCKER_BUILD_ARG_OPEN_CITY_PROFILE_API_URL: "https://open-city-profile-qa-r-feature-om-4-v25f6f.test.kuva.hel.ninja/graphql/"
+    DOCKER_BUILD_ARG_YOUTH_MEMBERSHIP_API_URL: "https://jassari-api.test.kuva.hel.ninja/graphql/"
   only:
     refs:
       - external_pull_requests
@@ -22,8 +22,8 @@ build-staging:
   variables:
     DOCKER_IMAGE_NAME: "$CI_PROJECT_NAME-staging"
     DOCKER_BUILD_ARG_DEBUG: "debug"
-    DOCKER_BUILD_ARG_OPEN_CITY_PROFILE_API_URL: "https://profiili-api.test.kuva.hel.ninja/graphql/"
-    DOCKER_BUILD_ARG_YOUTH_MEMBERSHIP_API_URL: "https://jassari-api.test.hel.ninja/graphql/"
+    DOCKER_BUILD_ARG_OPEN_CITY_PROFILE_API_URL: "https://open-city-profile-qa-r-feature-om-4-v25f6f.test.kuva.hel.ninja/graphql/"
+    DOCKER_BUILD_ARG_YOUTH_MEMBERSHIP_API_URL: "https://jassari-api.test.kuva.hel.ninja/graphql/"
   only:
     refs:
       - develop
@@ -44,11 +44,15 @@ review:
   variables:
     DOCKER_IMAGE_NAME: "$CI_PROJECT_NAME-review"
     POSTGRES_ENABLED: 0
+    # Allow using PR a environment
+    K8S_SECRET_NODE_TLS_REJECT_UNAUTHORIZED: 0
 
 # This will enable staging ci-pipeline
 staging:
   variables:
     DOCKER_IMAGE_NAME: "$CI_PROJECT_NAME-staging"
+    # Allow using PR a environment
+    K8S_SECRET_NODE_TLS_REJECT_UNAUTHORIZED: 0
   only:
     refs:
       - develop
