@@ -10,14 +10,17 @@ dotenv.config();
 const debug: boolean = process.env.DEBUG === "debug" || process.env.NODE_ENV !== "production";
 
 const port: string = process.env.PORT || "3000";
-const openCityProfileBackend: string = process.env.OPEN_CITY_PROFILE_API_URL;
-const youthMembershipBackend: string = process.env.YOUTH_MEMBERSHIP_API_URL;
+const openCityProfileBackendName: string = process.env.OPEN_CITY_PROFILE_API_NAME;
+const openCityProfileBackendUrl: string = process.env.OPEN_CITY_PROFILE_API_URL;
+const youthMembershipBackendName: string = process.env.YOUTH_MEMBERSHIP_API_NAME;
+const youthMembershipBackendUrl: string = process.env.YOUTH_MEMBERSHIP_API_URL;
+
 
 const gateway = new ApolloGateway({
     serviceList: [
         // name of the service is the same as its API scope for auth purposes
-        { name: "https://api.hel.fi/auth/helsinkiprofile", url: openCityProfileBackend },
-        { name: "https://api.hel.fi/auth/youthmembership", url: youthMembershipBackend },
+        { name: openCityProfileBackendName, url: openCityProfileBackendUrl },
+        { name: youthMembershipBackendName, url: youthMembershipBackendUrl },
     ],
     buildService({ name, url }) {
         return new AuthenticatedDataSource({ name, url });
