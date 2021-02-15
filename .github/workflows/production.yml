@@ -14,6 +14,11 @@ env:
   BUILD_ARTIFACT_FOLDER: 'build_artifacts'
   SERVICE_ARTIFACT_FOLDER: 'service_artifacts'
   SERVICE_PORT: 3000
+  K8S_REQUEST_CPU: 1m
+  K8S_REQUEST_RAM: 60Mi
+  K8S_LIMIT_CPU: 50m
+  K8S_LIMIT_RAM: 60Mi
+  K8S_REPLICACOUNT: 2
 
 jobs:
   build:
@@ -47,4 +52,3 @@ jobs:
           K8S_SECRET_OPEN_CITY_PROFILE_API_URL: "https://api.hel.fi/profiili/graphql/"
           K8S_SECRET_YOUTH_MEMBERSHIP_API_NAME: "https://api.hel.fi/auth/jassariapi"
           K8S_SECRET_YOUTH_MEMBERSHIP_API_URL: "https://jassari.api.hel.fi/graphql/"
-
