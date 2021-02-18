@@ -50,5 +50,5 @@ jobs:
           DOCKER_IMAGE_NAME: ${{ env.REPO_NAME }}-production
           K8S_SECRET_OPEN_CITY_PROFILE_API_NAME: "https://api.hel.fi/auth/helsinkiprofile"
           K8S_SECRET_OPEN_CITY_PROFILE_API_URL: "https://api.hel.fi/profiili/graphql/"
-          K8S_SECRET_YOUTH_MEMBERSHIP_API_NAME: "https://api.hel.fi/auth/jassariapi"
+          K8S_SECRET_YOUTH_MEMBERSHIP_API_NAME: "https://api.hel.fi/auth/jassariapiprod"
           K8S_SECRET_YOUTH_MEMBERSHIP_API_URL: "https://jassari.api.hel.fi/graphql/"
