@@ -182,5 +182,10 @@ export class AuthenticatedDataSource extends FileUploadDataSource {
           "Accept-Language",
           (context as any).acceptLanguage
       );
+
+      request.http.headers.set(
+          "X-Forwarded-For",
+          (context as any).clientIP
+      );
   }
 }
