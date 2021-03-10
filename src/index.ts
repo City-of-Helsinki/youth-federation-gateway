@@ -36,7 +36,8 @@ const gateway = new ApolloGateway({
         context: ({ req }) => {
             const apiTokens: string = req.headers["api-tokens"] || "";
             const acceptLanguage: string = req.headers["accept-language"] || "";
-            return { apiTokens, acceptLanguage };
+            const clientIP: string = req.headers["x-real-ip"] || req.ip;
+            return { apiTokens, acceptLanguage, clientIP };
         },
         debug: debug,
         playground: debug,
