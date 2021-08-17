@@ -4,6 +4,13 @@ on:
     branches:
       - master
 
+  workflow_dispatch:
+    inputs:
+      build_required:
+        description: "Build images (true/false)"
+        required: true
+        default: "false"
+
 env:
   CONTAINER_REGISTRY: ghcr.io
   CONTAINER_REGISTRY_USER: ${{ secrets.GHCR_CONTAINER_REGISTRY_USER }}
