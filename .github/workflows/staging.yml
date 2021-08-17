@@ -35,6 +35,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build
+        if: github.event_name == 'push' || github.event.inputs.build_required == 'true'
         uses: andersinno/kolga-build-action@v2
         env:
           DOCKER_IMAGE_NAME: ${{ env.REPO_NAME }}-staging
