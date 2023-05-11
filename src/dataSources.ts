@@ -183,7 +183,7 @@ export class AuthenticatedDataSource extends FileUploadDataSource {
           (context as any).acceptLanguage
       );
 
-      if ((context as any).clientIP) {
+      if ((context as any)?.clientIP) {
           request.http.headers.set(
               "X-Forwarded-For",
               (context as any).clientIP
