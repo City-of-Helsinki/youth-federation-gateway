@@ -27,7 +27,7 @@ This specific gateway combines two projects:
       setups for each project
     * you can use the test instances managed by the City of Helsinki:
         - https://profiili-api.test.kuva.hel.ninja/graphql/ for profile
-        - https://jassari-api.test.hel.ninja/graphql/ for youth membership
+        - https://jassari.api.test.hel.ninja/graphql/ for youth membership
 
 3. Adjust other variables according to your needs.
 
@@ -38,6 +38,6 @@ PORT you specified in the `docker-compose.env.yaml`)
 
 ## Environments
 
-Test environment: https://jassari-federation.test.kuva.hel.ninja/
+Test environment: https://jassari-federation.test.hel.ninja/
 
-Voyager graph of all Quieries: https://jassari-federation.test.kuva.hel.ninja/voyager
+Voyager graph of all Quieries: https://jassari-federation.test.hel.ninja/voyager
