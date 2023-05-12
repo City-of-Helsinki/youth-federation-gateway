@@ -1,0 +1,11 @@
+{
+  "bootstrap-sha": "ac1c9e5e4eef62635fe6b480c0bbec3626a2b71a",
+  "sequential-calls": true,
+  "packages": {
+    ".": {
+      "release-type": "node",
+      "package-name": "youth-federation-gateway"
+    },
+  },
+  "plugins": ["sentence-case"]
+}
