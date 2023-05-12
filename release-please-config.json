@@ -5,7 +5,7 @@
     ".": {
       "release-type": "node",
       "package-name": "youth-federation-gateway"
-    },
+    }
   },
   "plugins": ["sentence-case"]
 }

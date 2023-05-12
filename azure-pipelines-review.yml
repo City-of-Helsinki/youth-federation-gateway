@@ -25,6 +25,7 @@ pr:
     exclude:
     - '*release-please*'
     - '**/*.md'
+    - '.github/'
 
 # By default, use self-hosted agents
 pool: Default
