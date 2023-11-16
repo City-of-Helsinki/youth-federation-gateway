@@ -13,7 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "@apollo/gateway": "^0.20.0",
-    "apollo-server": "^2.17.0",
+    "apollo-server": "^2.26.2",
     "dotenv": "^8.2.0",
     "graphql": "^15.3.0",
     "graphql-voyager": "^1.0.0-rc.31"
